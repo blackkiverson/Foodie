@@ -1,12 +1,20 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import {View, Text, Image, StyleSheet} from 'react-native';
+import React from 'react';
+import Logo from '../../assets/img/FoodieLogo.png';
 
 const SignInScreen = () => {
   return (
     <View>
-      <Text>Sign In Screen</Text>
+      <Image source={Logo} style={styles.logo} />
     </View>
-  )
-}
+  );
+};
 
-export default SignInScreen
+const styles = StyleSheet.create({
+  logo: {
+    width: 66,
+    height: 58,
+  },
+});
+
+export default SignInScreen;
