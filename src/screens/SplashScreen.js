@@ -1,6 +1,7 @@
-import {View, Text, Image, StyleSheet, useWindowDimensions} from 'react-native';
+import {View, Text, Image, StyleSheet, useWindowDimensions, SafeAreaView} from 'react-native';
 import React from 'react';
 import Logo from '../../assets/img/FoodieLogoBlack.png';
+import LGContainer from '../components/LGContainer';
 
 /**
  * It returns a View component with an Image component inside it. The Image component has a source of
@@ -25,9 +26,15 @@ const SplashScreen = () => {
   const {height} = useWindowDimensions();
 
   return (
-    <View style={styles.root}>
-      <Image source={Logo} style={[styles.logo, {height: height * 0.3}]} resizeMode="contain" />
+    <LGContainer>
+    <View style={styles.root}>        
+      <Image
+        source={Logo}
+        style={[styles.logo, { height: height * 0.3 }]}
+        resizeMode="contain"
+      />
     </View>
+    </LGContainer>
   );
 };
 
