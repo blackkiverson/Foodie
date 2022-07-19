@@ -26,7 +26,6 @@ const SplashScreen = () => {
   const {height} = useWindowDimensions();
 
   return (
-    <LGContainer>
     <View style={styles.root}>        
       <Image
         source={Logo}
@@ -34,7 +33,6 @@ const SplashScreen = () => {
         resizeMode="contain"
       />
     </View>
-    </LGContainer>
   );
 };
 

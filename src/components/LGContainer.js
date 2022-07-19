@@ -6,10 +6,14 @@ import { LinearGradient } from 'expo-linear-gradient';
  * It returns a View component that contains a LinearGradient component.
  * @returns A View component with a LinearGradient component inside of it.
  */
-const LGContainer = () => {
+const LGContainer = (children) => {
   return (
     <View>
-      <LinearGradient colors={['#1B3287', '#0D0225']} style={styles.gradient}></LinearGradient>
+      <LinearGradient colors={['#1B3287', '#0D0225']} style={styles.gradient}>
+        <SafeAreaView>
+          {children}
+        </SafeAreaView>
+      </LinearGradient>
     </View>
   );
 };
