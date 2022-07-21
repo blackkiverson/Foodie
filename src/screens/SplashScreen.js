@@ -2,6 +2,7 @@ import {View, Text, Image, StyleSheet, useWindowDimensions, SafeAreaView} from '
 import React from 'react';
 import Logo from '../../assets/img/FoodieLogoBlack.png';
 import LGContainer from '../components/LGContainer';
+import { LinearGradient } from 'expo-linear-gradient';
 
 /**
  * It returns a View component with an Image component inside it. The Image component has a source of
@@ -26,22 +27,32 @@ const SplashScreen = () => {
   const {height} = useWindowDimensions();
 
   return (
-    <View style={styles.root}>        
-      <Image
-        source={Logo}
-        style={[styles.logo, { height: height * 0.3 }]}
-        resizeMode="contain"
-      />
+    <View style={styles.container}>
+      
+      <View style={styles.root}>
+      <LinearGradient
+        colors={["#ff7fff", "#000000"]}    
+>
+        <Image
+          source={Logo}
+          style={[styles.logo, { height: height * 0.3 }]}
+          resizeMode="contain"
+        /></LinearGradient>
+      </View>
     </View>
   );
 };
 
-/* Creating a styles object that contains two objects: logo and root. */
+/* Creating a styles object. */
 const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
   logo: {
-    /* Setting the maximum width and height of the image to 200. */
-    maxWidth: 200,
-    maxHeight: 200,
+    /* Making the image take up the entire width and height of the screen. */
+    maxWidth: '80%',
+    maxHeight: '100%',
+    alignContent: 'center'
   },
   root: {
     /* Centering the image and adding padding to the view. */

@@ -1,20 +1,19 @@
-import { StyleSheet, View, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import React from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
+import { LinearGradient } from 'react-native-linear-gradient';
 
 /**
- * It returns a View component that contains a LinearGradient component.
- * @returns A View component with a LinearGradient component inside of it.
+ * LGContainer is a function that takes in a child component and returns a LinearGradient component
+ * with a SafeAreaView component as a child.
+ * @returns A function that returns a component.
  */
 const LGContainer = (children) => {
   return (
-    <View>
-      <LinearGradient colors={['#1B3287', '#0D0225']} style={styles.gradient}>
-        <SafeAreaView>
-          {children}
-        </SafeAreaView>
-      </LinearGradient>
-    </View>
+    <LinearGradient colors={['#1B3287', '#0D0225']} style={styles.gradient}>
+      <SafeAreaView style={styles.container}>
+        {children}
+      </SafeAreaView>
+    </LinearGradient>
   );
 };
 

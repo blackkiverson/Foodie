@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import SplashScreen from './src/screens/SplashScreen';
 
 /**
@@ -20,6 +20,7 @@ export default function App() {
 /* Creating a style sheet for the app. */
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'transparent',
     /* Telling the view to take up all the space available. */
     flex: 1,
     /* Centering the content of the view. */
