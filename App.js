@@ -2,6 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import SplashScreen from './src/screens/SplashScreen';
+/*import SignUp from './src/screens/SignUp';*/
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator;
 
 /**
  * The App function returns a View component that contains a SplashScreen component and a StatusBar
@@ -10,10 +15,12 @@ import SplashScreen from './src/screens/SplashScreen';
  */
 export default function App() {
   return (
-    <View style={styles.container}>
-      <SplashScreen />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+        <View style={styles.container}>
+          <SplashScreen/>
+          <StatusBar style="auto"/>
+        </View>
+    </NavigationContainer>
   );
 }
 

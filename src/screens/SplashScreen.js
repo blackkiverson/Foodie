@@ -10,7 +10,7 @@ import { LinearGradient } from 'expo-linear-gradient';
  * 
  * The useWindowDimensions hook is imported from the react-native-hooks library.
  */
-const SplashScreen = () => {
+const SplashScreen = ({ navigator }) => {
   const {height} = useWindowDimensions();
 
   return (
