@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 
 const SignUp = () => {
   return (
@@ -9,6 +9,6 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
-
 const styles = StyleSheet.create({})
+
+export default SignUp;

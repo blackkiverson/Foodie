@@ -3,10 +3,10 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 /*import SplashScreen from './src/screens/SplashScreen';*/
 import SignUp from './src/screens/SignUp';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+/*import { createNativeStackNavigator } from '@react-navigation/native-stack';*/
 
-const Stack = createNativeStackNavigator;
+/*const Stack = createNativeStackNavigator;*/
 
 /**
  * The App function returns a View component that contains a SplashScreen component and a StatusBar
